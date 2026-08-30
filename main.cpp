@@ -7,13 +7,13 @@ int main() {
     for (int i = 0; i <= 5; i++) {
         arr[i] = i;
     }
+    int* arr = new int[5];
 
-    char src[] = "This string is too long";
-    char dest[5];
+    for (int i = 0; i <= 5; i++) {
+        arr[i] = i;
+    }
 
-    strcpy(dest, src);
+    std::string src = "This string is too long";
+    std::string dest = src;
 
     delete[] arr;
-
-    return 0;
-}
