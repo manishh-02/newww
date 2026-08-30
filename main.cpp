@@ -9,9 +9,7 @@ int main() {
     }
 
     char src[] = "This string is too long";
-    char dest[5];
-
-    strcpy(dest, src);
+    std::string dest = src;
 
     delete[] arr;
 
