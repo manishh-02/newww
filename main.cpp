@@ -11,7 +11,8 @@ int main() {
     char src[] = "This string is too long";
     char dest[5];
 
-    strcpy(dest, src);
+    std::strncpy(dest, src, sizeof(dest) - 1);
+    dest[sizeof(dest) - 1] = '\0';
 
     delete[] arr;
 
