@@ -1,6 +1,6 @@
 from flask import Flask, request
 import sqlite3
-import pickle
+import json
 
 app = Flask(__name__)
 
@@ -22,8 +22,8 @@ def login():
 def load():
     data = request.args.get("data")
 
-    # Insecure deserialization
-    obj = pickle.loads(data.encode())
+    # Safe deserialization using json
+    obj = json.loads(data)
 
     return str(obj)
 
